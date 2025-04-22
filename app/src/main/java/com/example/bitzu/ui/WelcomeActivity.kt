@@ -5,12 +5,12 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.bitzu.R
 
 class WelcomeActivity : AppCompatActivity() {
     lateinit var loginButton: AppCompatButton;
+    lateinit var signUpButton: AppCompatButton;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,5 +20,12 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
 
         }
+        signUpButton = findViewById(R.id.signUpButtonWelcome)
+        signUpButton.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+
+        }
+
+
     }
 }
