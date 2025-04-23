@@ -9,6 +9,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity">
 
+
     <TextView
         android:id="@+id/phraseSignUp"
         android:layout_width="311dp"
@@ -19,29 +20,91 @@
         android:textSize="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
-
+        app:layout_constraintVertical_bias="0.058" />
 
     <EditText
-        android:id="@+id/nameLoginSignUp"
+        android:id="@+id/emailSignUpInput"
         android:layout_width="267dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="4dp"
         android:background="@drawable/textfield_main_shape"
         android:fontFamily="@font/jetbrainsmonobold"
-        android:hint="Insira seu nome"
+        android:hint="Insira seu email"
         android:padding="12dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/purple"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/emailLabelSignUp"
+        app:layout_constraintBottom_toBottomOf="@+id/logintextSignUp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phraseSignUp"
-        app:layout_constraintVertical_bias="0.878" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+    <TextView
+        android:id="@+id/nameLabelSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:text="Nome"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <EditText
+        android:id="@+id/phoneSignUpInput"
+        android:layout_width="267dp"
+        android:layout_height="52dp"
+        android:background="@drawable/textfield_main_shape"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:hint="Insira seu telefone"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/purple"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailSignUpInput"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <TextView
+        android:id="@+id/passwordLabelSignUp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:text="Data de Nascimento"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <TextView
+        android:id="@+id/passwordLabelSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:text="Senha"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <EditText
         android:id="@+id/passwordSignUpInput"
@@ -57,10 +120,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLabelSignUp"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabelSignUp"
+        app:layout_constraintVertical_bias="0.262" />
 
     <EditText
         android:id="@+id/birthdaySignUpInput"
@@ -70,96 +133,80 @@
         android:background="@drawable/textfield_main_shape"
         android:fontFamily="@font/jetbrainsmonobold"
         android:hint="Insira a data de nascimento"
-        android:inputType="datetime|date"
         android:padding="12dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/purple"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLabelSignUp"
-        app:layout_constraintVertical_bias="0.378" />
-
-    <TextView
-        android:id="@+id/passwordLabelSignUp2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jetbrainsmonobold"
-        android:text="Data de Nascimento"
-        android:textColor="@color/purple"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.302"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
-
-    <EditText
-        android:id="@+id/emailLoginSignUp"
-        android:layout_width="267dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/textfield_main_shape"
-        android:fontFamily="@font/jetbrainsmonobold"
-        android:hint="Insira seu e-mail"
-        android:padding="12dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/purple"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/passwordLabelSignUp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLabelSignUp"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/passwordLabelSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jetbrainsmonobold"
-        android:text="Senha"
-        android:textColor="@color/purple"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabelSignUp"
+        app:layout_constraintVertical_bias="0.58" />
 
     <TextView
         android:id="@+id/emailLabelSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jetbrainsmonobold"
-        android:text="E-mail"
+        android:text="Email"
         android:textColor="@color/purple"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
-        android:id="@+id/nameLabelSignUp"
+        android:id="@+id/phoneLabelSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/jetbrainsmonobold"
-        android:text="Nome"
+        android:text="Telefone"
         android:textColor="@color/purple"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.44" />
+
+    <EditText
+        android:id="@+id/nameSignUpInput"
+        android:layout_width="267dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/textfield_main_shape"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:hint="Insira seu nome"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/purple"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailLabelSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phraseSignUp"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <TextView
+        android:id="@+id/logintextSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrainsmonobold"
+        android:text="Já possui uma conta?"
+        android:textColor="@color/purple"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/SignUpButton"
@@ -173,26 +220,11 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordSignUpInput"
-        app:layout_constraintVertical_bias="0.53"
+        app:layout_constraintVertical_bias="0.589"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/logintextSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/jetbrainsmonobold"
-        android:text="Já possui uma conta?"
-        android:textColor="@color/purple"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
