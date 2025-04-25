@@ -1,0 +1,27 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.bitzu.ui.indevelopment.InDevelopmentFragment"
+        android:label="Em Desenvolvimento" />
+    <fragment
+        android:id="@+id/navigation_projects"
+        android:name="com.example.bitzu.ui.projects.ProjectsFragment"
+        android:label="Em Desenvolvimento" />
+    <fragment
+        android:id="@+id/navigation_new"
+        android:name="com.example.bitzu.ui.indevelopment.InDevelopmentFragment"
+        android:label="Em Desenvolvimento" />
+    <fragment
+        android:id="@+id/navigation_bug"
+        android:name="com.example.bitzu.ui.indevelopment.InDevelopmentFragment"
+        android:label="Em Desenvolvimento" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.bitzu.ui.indevelopment.InDevelopmentFragment"
+        android:label="Em Desenvolvimento" />
+</navigation>

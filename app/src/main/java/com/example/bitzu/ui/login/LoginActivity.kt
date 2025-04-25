@@ -1,4 +1,4 @@
-package com.example.bitzu.ui
+package com.example.bitzu.ui.login
 
 import SessionManager
 import android.app.AlertDialog
@@ -12,7 +12,11 @@ import com.example.bitzu.R
 import com.example.bitzu.dtos.Token
 import com.example.bitzu.models.LoginRequest
 import com.example.bitzu.services.AuthService
+import com.example.bitzu.ui.signup.SignUpActivity
+import com.example.bitzu.ui.home.HomeActivity
 import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
     lateinit var signUpText: TextView;
@@ -40,18 +44,24 @@ class LoginActivity : AppCompatActivity() {
     }
     fun loginRequest(){
         println(loginRequest)
-        RetrofitClient.createService(AuthService::class.java).login(loginRequest).enqueue(object : retrofit2.Callback<Token> {
-            override fun onResponse(call: Call<Token>, response: retrofit2.Response<Token>) {
+        RetrofitClient.createService(AuthService::class.java).login(loginRequest).enqueue(object : Callback<Token> {
+            override fun onResponse(call: Call<Token>, response: Response<Token>) {
                 if (response.isSuccessful) {
                     val tokenCreated = response.body()
                     val session = SessionManager(this@LoginActivity)
                     session.saveToken(tokenCreated?.token ?: "")
+                    session.saveEmail(tokenCreated?.email ?: "")
                     println("Token: $tokenCreated")
                     startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                 } else {
                     println("Erro: ${response.code()}")
-                    if (response.code() == 403){
+                    if (response.code() == 401){
                         errorBuilder("Senha ou email incorretos")
+                        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+
+                    }else{
+                        errorBuilder("Tente Novamente mais tarde")
+
                     }
                 }
             }

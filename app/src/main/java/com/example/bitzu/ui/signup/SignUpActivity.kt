@@ -1,4 +1,4 @@
-package com.example.bitzu.ui
+package com.example.bitzu.ui.signup
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -10,7 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.bitzu.R
 import com.example.bitzu.models.User
+import com.example.bitzu.ui.login.LoginActivity
 import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -38,8 +41,8 @@ class SignUpActivity : AppCompatActivity() {
 
     }
     fun registerUser(){
-        RetrofitClient.createService(UserService::class.java).createUser(getUserInForm()).enqueue(object : retrofit2.Callback<User> {
-            override fun onResponse(call: Call<User>, response: retrofit2.Response<User>) {
+        RetrofitClient.createService(UserService::class.java).createUser(getUserInForm()).enqueue(object : Callback<User> {
+            override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful) {
                     val createdUser = response.body()
                     println("Usuário criado: $createdUser")
@@ -92,7 +95,8 @@ class SignUpActivity : AppCompatActivity() {
             telefone = phone,
             email = email,
             senha = password,
-            dataNascimento = birthDate
+            dataNascimento = birthDate,
+            id = null
         )
     }
 
