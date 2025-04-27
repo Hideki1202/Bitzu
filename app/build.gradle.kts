@@ -50,6 +50,10 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.0")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.0")
+    implementation ("com.google.android.flexbox:flexbox:3.0.0")
+    implementation ("androidx.recyclerview:recyclerview:1.1.0")
+
+
 
 
 }

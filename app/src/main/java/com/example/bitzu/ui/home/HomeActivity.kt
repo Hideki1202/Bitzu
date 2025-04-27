@@ -93,7 +93,10 @@ class HomeActivity : AppCompatActivity() {
         bottom_navigation.setOnItemSelectedListener { item ->
             val fragment: Fragment = when (item.itemId) {
                 R.id.navigation_home -> InDevelopmentFragment()
-                R.id.navigation_projects -> ProjectsFragment()
+                R.id.navigation_projects ->{
+                    bottomSheet.visibility = View.GONE
+                    bottomCoordinatorLayout.visibility = View.GONE
+                    ProjectsFragment()}
                 R.id.navigation_new -> {
                     bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
                     bottomCoordinatorLayout.visibility = View.VISIBLE
@@ -115,9 +118,7 @@ class HomeActivity : AppCompatActivity() {
         newProjectOptionText.setOnClickListener {
 
             val fragmentNewProject = NewProjectFragment()
-            val bundle = Bundle()
-            bundle.putSerializable("user_key", user)
-            fragmentNewProject.arguments = bundle
+
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, fragmentNewProject)
                 .commit()
@@ -127,7 +128,7 @@ class HomeActivity : AppCompatActivity() {
         }
         bottomCoordinatorLayout.setOnClickListener {
             bottomSheet.visibility = View.GONE
-
+            bottomCoordinatorLayout.visibility = View.GONE
         }
 
         // Gerenciar a visibilidade do overlay quando o SideSheet mudar de estado
