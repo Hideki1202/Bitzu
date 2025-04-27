@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.indevelopment.InDevelopmentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/new_project_title"
+            android:layout_width="294dp"
+            android:layout_height="66dp"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Chame colaboradores para  o seu projeto!"
+            android:textColor="@color/purple"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.341"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.055" />
+
+        <TextView
+            android:id="@+id/projectNameLabelNewProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Nome do Projeto"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.18" />
+
+        <EditText
+            android:id="@+id/project_name_input"
+            android:layout_width="267dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/textfield_main_shape"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:hint=""
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/purple"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_project_title"
+            app:layout_constraintVertical_bias="0.011" />
+
+        <TextView
+            android:id="@+id/DescriptionLabelNewProject"
+            android:layout_width="308dp"
+            android:layout_height="85dp"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Faça uma descrição do projeto e de quem você deseja colaborando no seu projeto!"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.354" />
+
+        <EditText
+            android:id="@+id/description_input"
+            android:layout_width="267dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/textfield_main_shape"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:hint=""
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/purple"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_project_title"
+            app:layout_constraintVertical_bias="0.328" />
+
+        <TextView
+            android:id="@+id/LinkLabelNewProject"
+            android:layout_width="307dp"
+            android:layout_height="27dp"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Link adicional:"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.605" />
+
+        <EditText
+            android:id="@+id/link_input"
+            android:layout_width="267dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/textfield_main_shape"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:hint=""
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/purple"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_project_title"
+            app:layout_constraintVertical_bias="0.582" />
+
+        <TextView
+            android:id="@+id/TagsLabelNewProject"
+            android:layout_width="307dp"
+            android:layout_height="27dp"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Tags:"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
+        <TextView
+            android:id="@+id/RequiredTagsNewProject"
+            android:layout_width="307dp"
+            android:layout_height="27dp"
+            android:fontFamily="@font/jetbrainsmonobold"
+            android:text="Selecione até 6 tags"
+            android:textColor="#424242"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.776" />
+
+        <Spinner
+            android:id="@+id/my_spinner"
+            android:layout_width="267dp"
+            android:layout_height="52dp"
+            android:background="@drawable/textfield_main_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.284"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RequiredTagsNewProject"
+            app:layout_constraintVertical_bias="0.151" />
+
+        <LinearLayout
+            android:id="@+id/tagsContainer"
+            android:layout_width="285dp"
+            android:layout_height="51dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.325"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_spinner"
+            app:layout_constraintVertical_bias="0.07"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

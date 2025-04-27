@@ -1,6 +1,8 @@
 package com.example.bitzu.models;
 
-data class User(
+import java.io.Serializable
+
+data class User (
 
     val username: String,
     val telefone: String,
@@ -9,7 +11,7 @@ data class User(
     val dataNascimento: String,
     val id : String?
 
-){
+) : Serializable {
 
 }
 
